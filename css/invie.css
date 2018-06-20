@@ -286,8 +286,8 @@ input:focus, textarea:focus {
   left: 20px;
   top: 20px;
   z-index: 3;
+  color: white;
 }
-
 
 @media screen and (max-width: 800px) {
   /* Portada  */
@@ -338,6 +338,16 @@ input:focus, textarea:focus {
       padding: 0;
     }
     /* ************** */
+    /* Precios */
+    .tabla{
+      margin: 50px 20px;
+    }
+    
+    .tabla .contenedor{
+      overflow: auto;
+      border: 1px solid #273b47;
+    }
+    /* ******* */
 }
 
 @media screen and (max-width: 767px){
@@ -413,6 +423,14 @@ input:focus, textarea:focus {
 @media screen and (max-width: 525px){
   /* Portada */
   .portada .contenedor{
+    position: static;
+  }
+
+  .header{
+    position: static;
+  }
+
+  .header .contenedor{
     position: static;
   }
 
