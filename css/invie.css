@@ -80,6 +80,7 @@ input:focus, textarea:focus {
 }
 
 .background {
+  background-color: #466173;
   background-image: url('../images/background.png');
   background-size: cover;
 }
@@ -477,4 +478,10 @@ input:focus, textarea:focus {
     padding: 0;
   }
 
+}
+
+@media screen and (min-device-pixel-ratio: 2){
+  .background{
+    background: url('../images/background2x.png');
+  }
 }
