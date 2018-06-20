@@ -104,6 +104,7 @@
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
     <script>
       let $burguerButton = document.getElementById('burguer-button');
       let $menu = document.getElementById('menu');
@@ -118,13 +119,25 @@
           console.log("no se cumple");
         }
       }
-      mediaQuery()
+      mediaQuery();
       function toggleMenu(){
             $menu.classList.toggle('active');
           }
+      function showMenu(){
+        $menu.classList.add('active');
+      }
+      function hideMenu(){
+        $menu.classList.remove('active');
+      }
       var bLazy = new Blazy({
         selector: 'img'
       });
+
+      let $body = document.body;
+      let gestos = new Hammer($body);
+      gestos.on('swipeleft', hideMenu);
+      gestos.on('swiperight',showMenu);
+
     </script>
   </body>
 </html>
